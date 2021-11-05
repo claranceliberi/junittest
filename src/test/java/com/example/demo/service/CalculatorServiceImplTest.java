@@ -15,7 +15,7 @@ public class CalculatorServiceImplTest {
     @Test
    public void testSumofNumbers_empty(){
         CalculatorServiceImpl calculatorService = new CalculatorServiceImpl();
-        int actualResult = calculatorService.sumOfNumbers(new int[] {});
+        int actualResult = calculatorService.sumOfNumbers();
         int expectedResult = 0;
         assertEquals(expectedResult,actualResult);
 
