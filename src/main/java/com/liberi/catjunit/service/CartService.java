@@ -1,7 +1,7 @@
-package com.example.classbjunit.service;
+package com.liberi.catjunit.service;
 
-import com.example.classbjunit.model.Cart;
-import com.example.classbjunit.model.dto.CartDto;
+import com.liberi.catjunit.model.Cart;
+import com.liberi.catjunit.model.dto.CartDto;
 
 import java.util.List;
 

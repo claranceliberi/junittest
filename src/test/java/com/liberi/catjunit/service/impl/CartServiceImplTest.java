@@ -1,11 +1,11 @@
-package com.example.classbjunit.service.impl;
+package com.liberi.catjunit.service.impl;
 
 
-import com.example.classbjunit.model.Cart;
-import com.example.classbjunit.model.Item;
-import com.example.classbjunit.model.dto.CartDto;
-import com.example.classbjunit.repository.CartRepository;
-import com.example.classbjunit.repository.ItemRepository;
+import com.liberi.catjunit.model.Cart;
+import com.liberi.catjunit.model.Item;
+import com.liberi.catjunit.model.dto.CartDto;
+import com.liberi.catjunit.repository.CartRepository;
+import com.liberi.catjunit.repository.ItemRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentMatchers;

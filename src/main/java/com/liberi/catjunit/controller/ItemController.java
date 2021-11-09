@@ -1,14 +1,13 @@
-package com.example.classbjunit.controller;
+package com.liberi.catjunit.controller;
 
 import java.util.List;
 
-import com.example.classbjunit.service.ItemService;
+import com.liberi.catjunit.service.ItemService;
+import com.liberi.catjunit.model.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.example.classbjunit.model.Item;
 
 @RestController
 @RequestMapping("/items")

@@ -1,15 +1,14 @@
-package com.example.classbjunit.service.impl;
+package com.liberi.catjunit.service.impl;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.example.classbjunit.model.dto.ItemDto;
-import com.example.classbjunit.service.ItemService;
+import com.liberi.catjunit.model.dto.ItemDto;
+import com.liberi.catjunit.service.ItemService;
+import com.liberi.catjunit.model.Item;
+import com.liberi.catjunit.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.example.classbjunit.model.Item;
-import com.example.classbjunit.repository.ItemRepository;
 
 @Service
 public class ItemServiceImpl implements ItemService {

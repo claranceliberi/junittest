@@ -1,4 +1,4 @@
-package com.example.classbjunit.model;
+package com.liberi.catjunit.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

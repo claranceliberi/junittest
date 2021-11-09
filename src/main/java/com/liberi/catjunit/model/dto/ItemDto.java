@@ -1,6 +1,6 @@
-package com.example.classbjunit.model.dto;
+package com.liberi.catjunit.model.dto;
 
-import com.example.classbjunit.model.Item;
+import com.liberi.catjunit.model.Item;
 
 public class ItemDto {
     private int id;

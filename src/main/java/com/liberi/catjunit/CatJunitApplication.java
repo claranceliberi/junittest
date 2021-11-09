@@ -1,4 +1,4 @@
-package com.example.classbjunit;
+package com.liberi.catjunit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

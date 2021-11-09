@@ -1,9 +1,7 @@
-package com.example.classbjunit;
+package com.liberi.catjunit;
 
-import com.example.classbjunit.service.ItemServiceTest;
-import com.example.classbjunit.service.impl.CartServiceImpl;
-import com.example.classbjunit.service.impl.CartServiceImplTest;
-import org.junit.jupiter.api.Test;
+import com.liberi.catjunit.service.ItemServiceTest;
+import com.liberi.catjunit.service.impl.CartServiceImplTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.springframework.boot.test.context.SpringBootTest;

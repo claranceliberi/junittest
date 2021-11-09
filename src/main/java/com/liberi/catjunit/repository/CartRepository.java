@@ -1,6 +1,6 @@
-package com.example.classbjunit.repository;
+package com.liberi.catjunit.repository;
 
-import com.example.classbjunit.model.Cart;
+import com.liberi.catjunit.model.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
