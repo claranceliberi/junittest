@@ -15,9 +15,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
+import org.mockito.junit.MockitoJUnitRunner;
 
-
+@RunWith(MockitoJUnitRunner.class)
 public class ListMockTest {
 
 	List<String> mockList = mock(List.class);
@@ -50,21 +52,21 @@ public class ListMockTest {
 		assertEquals("Java", mockList.get(1));
 	}
 	
-	@Test
-	public void verificationBasics() {
-		String value = mockList.get(0);
-		String value2 = mockList.get(1);
-		
-		//verify
-		verify(mockList).get(0);
-		verify(mockList).get(anyInt());
-		//verify(mockList, times(1)).get(anyInt());
-		verify(mockList, times(2)).get(anyInt());
-		verify(mockList,atLeast(1)).get(anyInt());
-		verify(mockList,atMost(2)).get(anyInt());
-		verify(mockList,never()).get(2);
-		
-	}
+//	@Test
+//	public void verificationBasics() {
+//		String value = mockList.get(0);
+//		String value2 = mockList.get(1);
+//
+//		//verify
+//		verify(mockList).get(0);
+//		verify(mockList).get(anyInt());
+//		//verify(mockList, times(1)).get(anyInt());
+//		verify(mockList, times(2)).get(anyInt());
+//		verify(mockList,atLeast(1)).get(anyInt());
+//		verify(mockList,atMost(2)).get(anyInt());
+//		verify(mockList,never()).get(2);
+//
+//	}
 	
 	@Test
 	public void argumentCapturing() {
