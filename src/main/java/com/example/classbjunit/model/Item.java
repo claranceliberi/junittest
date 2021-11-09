@@ -2,7 +2,9 @@ package com.example.classbjunit.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Transient;
+import java.util.Set;
 
 @Entity
 public class Item {
@@ -27,10 +29,12 @@ public class Item {
 	@Transient
 	private int value;
 
+	@ManyToMany
+	Set<Item> carts;
+
 	
 	public Item() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getId() {

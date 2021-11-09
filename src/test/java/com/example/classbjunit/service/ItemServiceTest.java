@@ -17,8 +17,10 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import com.example.classbjunit.model.Item;
 import com.example.classbjunit.repository.ItemRepository;
+import org.springframework.boot.test.context.SpringBootTest;
 
 @RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
 public class ItemServiceTest {
 
 

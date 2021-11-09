@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>classb-junit</artifactId>
+	<artifactId>junit-cat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>classb-junit</name>
-	<description>Demo project for Spring Boot</description>
+	<name>junit-cat</name>
+	<description>CAT project for Spring Boot unit test</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
