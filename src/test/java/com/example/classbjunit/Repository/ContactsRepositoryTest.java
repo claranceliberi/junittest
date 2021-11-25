@@ -49,11 +49,8 @@ public class ContactsRepositoryTest {
     @Test
     public void findAll_test() {
         List<Contact> contacts = contactRepository.findAll();
-        System.out.println("-------------------- hey");
-        for(Contact contact: contacts){
-            System.out.println(contact.getFirstName());
-        }
-        assertEquals(contacts.size(), 14);
+
+        assertEquals(contacts.size(), 9);
     }
 
     @Test

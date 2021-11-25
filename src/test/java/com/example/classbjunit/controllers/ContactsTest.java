@@ -1,6 +1,7 @@
 package com.example.classbjunit.controllers;
 
 import com.example.classbjunit.controller.Contacts;
+import com.example.classbjunit.exceptions.NotFoundException;
 import com.example.classbjunit.model.Contact;
 import com.example.classbjunit.service.ContactService;
 import org.junit.Test;
@@ -46,7 +47,17 @@ public class ContactsTest {
 
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/api/contacts/1").accept(MediaType.APPLICATION_JSON);
 
-        mockMvc.perform(request).andExpect(status().isOk()).andReturn();
+        mockMvc.perform(request).andExpect(status().isOk()).andExpect(content().json("{\"id\":1,\"firstName\":\"Kaisa\",\"mobilePhone\":\"250783384212\"}")).andReturn();
+    }
+
+    @Test
+    public void findById_testFail() throws Exception {
+        when(contactService.findById(anyLong())).thenThrow(new NotFoundException("Contact with Id not found"));
+
+        MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/api/contacts/1").accept(MediaType.APPLICATION_JSON);
+
+        mockMvc.perform(request).andExpect(status().isNoContent())
+                .andExpect(content().string("")).andReturn();
     }
 
     @Test

@@ -13,7 +13,7 @@ public interface ContactService {
 
     List<Contact> findByHomePhone(String homePhone);
 
-    Contact findById(Long id);
+    Contact findById(Long id) throws Exception;
 
     Contact create(Contact contact);
 

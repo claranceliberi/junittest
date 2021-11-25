@@ -1,6 +1,7 @@
 package com.example.classbjunit.service.impl;
 
 
+import com.example.classbjunit.exceptions.NotFoundException;
 import com.example.classbjunit.model.Contact;
 import com.example.classbjunit.repository.ContactRepository;
 import com.example.classbjunit.service.ContactService;
@@ -42,8 +43,8 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public Contact findById(Long id) {
-        return contactRepository.findById(id).orElse(null);
+    public Contact findById(Long id) throws Exception {
+        return contactRepository.findById(id).orElseThrow(()-> new NotFoundException("Contact with Id not found"));
     }
 
     @Override

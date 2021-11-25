@@ -40,7 +40,12 @@ public class Contacts {
 
     @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable Long id) {
-        return ResponseEntity.ok(contactService.findById(id));
+        try{
+            return ResponseEntity.ok(contactService.findById(id));
+        }catch(Exception e){
+            e.printStackTrace();
+            return ResponseEntity.noContent().build();
+        }
     }
 
     @PostMapping("")

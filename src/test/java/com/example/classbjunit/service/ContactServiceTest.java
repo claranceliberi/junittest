@@ -11,7 +11,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.Arrays;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
@@ -53,10 +53,25 @@ public class ContactServiceTest {
     }
 
     @Test
-    public void findById_test() {
+    public void findById_test() throws Exception {
         when(contactRepository.findById(anyLong())).thenReturn(Optional.of(new Contact(1L, "Kaisa", "+250783384212")));
 
         assertEquals("Kaisa", contactService.findById(1L).getFirstName());
+    }
+
+    @Test
+    public void findById_testFail() throws Exception {
+        when(contactRepository.findById(anyLong())).thenReturn(Optional.empty());
+
+        Exception exception = assertThrows(RuntimeException
+                .class, () -> {
+            contactService.findById(1L);
+        });
+
+        String expectedMessage = "Contact with Id not found";
+        String actualMessage = exception.getMessage();
+        assertTrue(actualMessage.contains(expectedMessage));
+
     }
 
     @Test
